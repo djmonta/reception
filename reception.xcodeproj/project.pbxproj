@@ -193,6 +193,7 @@
 				TargetAttributes = {
 					70E1B7B01DA518AD00278623 = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = JP7CKXLT25;
 						ProvisioningStyle = Automatic;
 					};
 					70E1B7C41DA518AD00278623 = {
@@ -412,6 +413,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = JP7CKXLT25;
 				INFOPLIST_FILE = reception/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.inforichjapan.reception;
@@ -424,6 +426,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = JP7CKXLT25;
 				INFOPLIST_FILE = reception/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.inforichjapan.reception;
