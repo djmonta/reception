@@ -29,29 +29,39 @@
                                     <action selector="pushButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oLd-xA-zLt"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please wait a moment" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2IM-ad-3tI">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wait" translatesAutoresizingMaskIntoConstraints="NO" id="j4C-QB-yGG">
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="300" id="Yzw-az-Jcs"/>
+                                    <constraint firstAttribute="width" constant="275" id="Myl-1o-8ya"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <color key="textColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pushhere" translatesAutoresizingMaskIntoConstraints="NO" id="P3R-7N-Eua">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="jMo-ze-2bZ"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="2IM-ad-3tI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8xv-Yk-EVW"/>
                             <constraint firstItem="hfS-cZ-5vJ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="9Ft-2k-ubL"/>
-                            <constraint firstItem="2IM-ad-3tI" firstAttribute="top" secondItem="hfS-cZ-5vJ" secondAttribute="bottom" constant="8" id="FIa-vc-Qu1"/>
+                            <constraint firstItem="P3R-7N-Eua" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RdO-ZC-KC0"/>
+                            <constraint firstItem="hfS-cZ-5vJ" firstAttribute="top" secondItem="P3R-7N-Eua" secondAttribute="bottom" constant="60" id="mNs-0j-378"/>
+                            <constraint firstItem="j4C-QB-yGG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="q2E-Ri-QRs"/>
+                            <constraint firstItem="j4C-QB-yGG" firstAttribute="top" secondItem="hfS-cZ-5vJ" secondAttribute="bottom" constant="50" id="v99-6A-JXD"/>
                             <constraint firstItem="hfS-cZ-5vJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yuV-bM-c0l"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="waitLabel" destination="2IM-ad-3tI" id="crw-8R-yuc"/>
+                        <outlet property="pushhere" destination="P3R-7N-Eua" id="IRf-YS-MvZ"/>
+                        <outlet property="wait" destination="j4C-QB-yGG" id="KTW-pq-06I"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="137.6953125" y="138.79941434846265"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="pushhere" width="202" height="110"/>
+        <image name="wait" width="188" height="19"/>
+    </resources>
 </document>

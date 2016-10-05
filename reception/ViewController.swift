@@ -10,15 +10,29 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var waitLabel: UILabel!
+    @IBOutlet weak var pushhere: UIImageView!
+    @IBOutlet weak var wait: UIImageView!
     var timer: Timer!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        waitLabel.isHidden = true
-        waitLabel.alpha = 1
         fadeOutTimer()
+
+        wait.isHidden = true
+        wait.alpha = 1
+        pushhere.isHidden = false
+        pushhere.alpha = 1
+
+        pushhere.layer.removeAllAnimations()
+        let animation = CABasicAnimation(keyPath: "opacity")
+        animation.fromValue = 0.0
+        animation.toValue = 1.0
+        animation.timingFunction = CAMediaTimingFunction(name:kCAMediaTimingFunctionEaseInEaseOut)
+        animation.repeatCount = MAXFLOAT
+        animation.duration = 0.8
+        pushhere.layer.add(animation, forKey: "opacity")
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -30,7 +44,8 @@ class ViewController: UIViewController {
         if timer.isValid == true {
             timer.invalidate()
         }
-        waitLabel.fadeOut(type: FadeType.Normal)
+        wait.fadeOut(type: FadeType.Normal)
+        pushhere.fadeOut(type: FadeType.Normal)
         
         // create the url-request
         let urlString = "https://api.instapush.im/v1/post"
@@ -66,7 +81,7 @@ class ViewController: UIViewController {
                         // print(json)
                         if json["error"] as? Error == nil {
                             print("success")
-                            self.waitLabel.fadeIn(type: FadeType.Normal)
+                            self.wait.fadeIn(type: FadeType.Normal)
                             self.fadeOutTimer()
                         }
                     } catch let err as NSError {
@@ -80,12 +95,12 @@ class ViewController: UIViewController {
         task.resume()
     }
     
-    func waitLabelfadeOut() {
-        self.waitLabel.fadeOut(type: FadeType.Slow)
+    func waitfadeOut() {
+        self.wait.fadeOut(type: FadeType.Slow)
     }
     
     func fadeOutTimer() {
-        self.timer = Timer.scheduledTimer(timeInterval: 29.0, target: self, selector: #selector(ViewController.waitLabelfadeOut), userInfo: nil, repeats: false)
+        self.timer = Timer.scheduledTimer(timeInterval: 9.0, target: self, selector: #selector(ViewController.waitfadeOut), userInfo: nil, repeats: false)
     }
 
 }
