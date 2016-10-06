@@ -24,14 +24,7 @@ class ViewController: UIViewController {
         pushhere.isHidden = false
         pushhere.alpha = 1
 
-        pushhere.layer.removeAllAnimations()
-        let animation = CABasicAnimation(keyPath: "opacity")
-        animation.fromValue = 0.0
-        animation.toValue = 1.0
-        animation.timingFunction = CAMediaTimingFunction(name:kCAMediaTimingFunctionEaseInEaseOut)
-        animation.repeatCount = MAXFLOAT
-        animation.duration = 0.8
-        pushhere.layer.add(animation, forKey: "opacity")
+        blink()
         
     }
 
@@ -97,10 +90,24 @@ class ViewController: UIViewController {
     
     func waitfadeOut() {
         self.wait.fadeOut(type: FadeType.Slow)
+        pushhere.isHidden = false
+        pushhere.alpha = 1
+        blink()
     }
     
     func fadeOutTimer() {
         self.timer = Timer.scheduledTimer(timeInterval: 9.0, target: self, selector: #selector(ViewController.waitfadeOut), userInfo: nil, repeats: false)
+    }
+    
+    func blink() {
+        pushhere.layer.removeAllAnimations()
+        let animation = CABasicAnimation(keyPath: "opacity")
+        animation.fromValue = 0.0
+        animation.toValue = 1.0
+        animation.timingFunction = CAMediaTimingFunction(name:kCAMediaTimingFunctionEaseInEaseOut)
+        animation.repeatCount = MAXFLOAT
+        animation.duration = 0.8
+        pushhere.layer.add(animation, forKey: "opacity")
     }
 
 }

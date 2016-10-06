@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		706509BC1DA5AD7300C0E0E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 706509BB1DA5AD7300C0E0E4 /* Assets.xcassets */; };
-		706509BE1DA5B3D800C0E0E4 /* LaunchImage.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 706509BD1DA5B3D800C0E0E4 /* LaunchImage.xcassets */; };
 		70E1B7B51DA518AD00278623 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E1B7B41DA518AD00278623 /* AppDelegate.swift */; };
 		70E1B7B71DA518AD00278623 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E1B7B61DA518AD00278623 /* ViewController.swift */; };
 		70E1B7BA1DA518AD00278623 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70E1B7B81DA518AD00278623 /* Main.storyboard */; };
@@ -36,7 +35,6 @@
 
 /* Begin PBXFileReference section */
 		706509BB1DA5AD7300C0E0E4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		706509BD1DA5B3D800C0E0E4 /* LaunchImage.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = LaunchImage.xcassets; sourceTree = "<group>"; };
 		70E1B7B11DA518AD00278623 /* reception.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = reception.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		70E1B7B41DA518AD00278623 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		70E1B7B61DA518AD00278623 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -105,7 +103,6 @@
 				70E1B7BD1DA518AD00278623 /* LaunchScreen.storyboard */,
 				70E1B7C01DA518AD00278623 /* Info.plist */,
 				706509BB1DA5AD7300C0E0E4 /* Assets.xcassets */,
-				706509BD1DA5B3D800C0E0E4 /* LaunchImage.xcassets */,
 			);
 			path = reception;
 			sourceTree = "<group>";
@@ -196,7 +193,7 @@
 				TargetAttributes = {
 					70E1B7B01DA518AD00278623 = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = JP7CKXLT25;
+						DevelopmentTeam = 6U33V883SZ;
 						ProvisioningStyle = Automatic;
 					};
 					70E1B7C41DA518AD00278623 = {
@@ -238,7 +235,6 @@
 			files = (
 				70E1B7BF1DA518AD00278623 /* LaunchScreen.storyboard in Resources */,
 				706509BC1DA5AD7300C0E0E4 /* Assets.xcassets in Resources */,
-				706509BE1DA5B3D800C0E0E4 /* LaunchImage.xcassets in Resources */,
 				70E1B7BA1DA518AD00278623 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -416,10 +412,13 @@
 		70E1B7DA1DA518AE00278623 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DEVELOPMENT_TEAM = JP7CKXLT25;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = 6U33V883SZ;
 				INFOPLIST_FILE = reception/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.inforichjapan.reception;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.inforichjapan.inforich-reception";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -428,10 +427,13 @@
 		70E1B7DB1DA518AE00278623 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DEVELOPMENT_TEAM = JP7CKXLT25;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = 6U33V883SZ;
 				INFOPLIST_FILE = reception/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.inforichjapan.reception;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.inforichjapan.inforich-reception";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};

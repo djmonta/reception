@@ -18,25 +18,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wait" translatesAutoresizingMaskIntoConstraints="NO" id="j4C-QB-yGG">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="400" id="Myl-1o-8ya"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pushhere" translatesAutoresizingMaskIntoConstraints="NO" id="P3R-7N-Eua">
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="200" id="jMo-ze-2bZ"/>
+                                </constraints>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hfS-cZ-5vJ">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="Hxo-uU-Swa"/>
-                                    <constraint firstAttribute="width" constant="400" id="iGg-eh-p5y"/>
+                                    <constraint firstAttribute="height" constant="50" id="Hxo-uU-Swa"/>
+                                    <constraint firstAttribute="width" constant="600" id="iGg-eh-p5y"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="45"/>
                                 <state key="normal" title="Welcome to INFORICH Inc."/>
                                 <connections>
                                     <action selector="pushButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oLd-xA-zLt"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wait" translatesAutoresizingMaskIntoConstraints="NO" id="j4C-QB-yGG">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="Tuc-q3-dmP">
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="275" id="Myl-1o-8ya"/>
-                                </constraints>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pushhere" translatesAutoresizingMaskIntoConstraints="NO" id="P3R-7N-Eua">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="240" id="jMo-ze-2bZ"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="120" id="joy-5l-tg0"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="400" id="wca-Ze-vKb"/>
                                 </constraints>
                             </imageView>
                         </subviews>
@@ -44,9 +50,11 @@
                         <constraints>
                             <constraint firstItem="hfS-cZ-5vJ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="9Ft-2k-ubL"/>
                             <constraint firstItem="P3R-7N-Eua" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RdO-ZC-KC0"/>
+                            <constraint firstItem="Tuc-q3-dmP" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="100" id="csl-81-kaZ"/>
                             <constraint firstItem="hfS-cZ-5vJ" firstAttribute="top" secondItem="P3R-7N-Eua" secondAttribute="bottom" constant="60" id="mNs-0j-378"/>
+                            <constraint firstItem="Tuc-q3-dmP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mQT-AH-a6m"/>
                             <constraint firstItem="j4C-QB-yGG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="q2E-Ri-QRs"/>
-                            <constraint firstItem="j4C-QB-yGG" firstAttribute="top" secondItem="hfS-cZ-5vJ" secondAttribute="bottom" constant="50" id="v99-6A-JXD"/>
+                            <constraint firstItem="j4C-QB-yGG" firstAttribute="top" secondItem="hfS-cZ-5vJ" secondAttribute="bottom" constant="60" id="v99-6A-JXD"/>
                             <constraint firstItem="hfS-cZ-5vJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yuV-bM-c0l"/>
                         </constraints>
                     </view>
@@ -61,6 +69,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="logo" width="200" height="124"/>
         <image name="pushhere" width="202" height="110"/>
         <image name="wait" width="188" height="19"/>
     </resources>
